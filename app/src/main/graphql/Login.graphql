@@ -1,0 +1,41 @@
+mutation LoginEmpresa($ruc: String!, $email: String!, $password: String!) {
+    loginEmpresa(ruc: $ruc, correo: $email, password: $password) {
+        success
+        message
+        empresa{
+            id
+            ruc
+            razonSocial
+            correo
+            telefono
+            direccion
+#            userSet{
+#                id
+#                firstName
+#                lastName
+#                document
+#                email
+#                phone
+#                isActive
+#            }
+#            zonaSet{
+#                id
+#                codigo
+#                nombre
+#                activo
+#                empresaId
+#                fundoSet{
+#                    id
+#                    codigo
+#                    nombre
+#                    activo
+#                    zonaId
+#                    userFundoSet{
+#                        userId
+#                        fundoId
+#                    }
+#                }
+#            }
+        }
+    }
+}
